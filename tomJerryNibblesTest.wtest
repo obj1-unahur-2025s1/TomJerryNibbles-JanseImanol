@@ -35,4 +35,31 @@ import tomJerryNibbles.*
      assert.equals(25.9,tom.velMax())
      assert.equals(209, tom.getEnergia())     
    }
+
+   test "tom corre 38 metros vel max 24 energia 190" {
+     tom.comer(jerry)
+     tom.correr(24)
+     tom.comer(nibbles)
+     jerry.cumplirAnios()
+     tom.comer(jerry)
+     tom.correr(38)
+     assert.equals(24,tom.velMax())
+     assert.equals(190, tom.getEnergia())     
+   }
+ }
+
+ describe "caso de prueba 2" {
+   test "tom no llega a comer" {
+     assert.notThat(tom.puedeCazar(10000))
+   }
+
+   test "tom llega a comer" {
+     assert.that(tom.puedeCazar(20))
+   }
+
+   test "tom caza a perez a una distancia de 20m velMax 13.2 energia 82" {
+     tom.cazar(20, perez)
+     assert.equals(13.2, tom.velMax())
+     assert.equals(82, tom.getEnergia())
+   }
  }

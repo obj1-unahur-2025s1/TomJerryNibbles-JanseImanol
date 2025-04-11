@@ -21,16 +21,12 @@ object tom {
       }
     }
     
-
-
 }
 
 object jerry {
   var edad = 2
-  var peso = edad * 20
-  var distancia = 0
 
-  method getPeso() = peso 
+  method getPeso() = edad * 20
   method getEdad() = edad 
 
   method cumplirAnios() {
@@ -45,5 +41,5 @@ object nibbles {
 // Inventar otro ratón
 
 object perez {
-  var peso = 30
+  method getPeso() = 30  
 }
